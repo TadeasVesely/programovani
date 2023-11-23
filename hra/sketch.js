@@ -32,9 +32,14 @@ function draw() {
     dir.setMag(playerSpeed);
     player.add(dir);
 
+    // @ts-ignore
+    var enemyDir = p5.Vector.sub(player,enemy);
+    enemyDir.setMag(3);
+    enemy.add(enemyDir);
+
     fill(255);
     circle(player.x, player.y, playerSize);
 
-    fill(255, 0, 0);
+    fill(0, 0, 0);
     circle(enemy.x, enemy.y, enemySize);
 }
