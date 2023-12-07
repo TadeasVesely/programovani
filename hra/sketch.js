@@ -12,7 +12,7 @@ function setup() {
 
     player = createVector(width / 2, height / 2);
 
-    for (var i = 0; i < 350; i++) {
+    for (var i = 0; i < 300; i++) {
         var randomPos = createVector(random(width), random(height));
         var enemy = new Enemy(randomPos)
         enemies.push(enemy);
@@ -37,6 +37,16 @@ function draw() {
     fill(255);
     circle(player.x, player.y, playerSize);
 
+    for (var enemy of enemies)
+        enemy.draw();
+
+        for (var bullet of bullets)
+            bullet.draw();
+
+    function mousePressed() {
+        bullets.push(new Bullet(player));
+    }
+
     if (player.x>800)
         player.x=0
     if (player.x<0)
@@ -49,5 +59,4 @@ function draw() {
     for (const enemy of enemies) {
         enemy.draw()
     }
-
 }
