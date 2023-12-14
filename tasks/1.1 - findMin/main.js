@@ -14,5 +14,13 @@ function setup() {
 //      for(int i = 0; i < max; i++) - udělá něco max-krát, do proměnné i nastaví postupně čísla od 0 do (max - 1)
 //      return x - vrátí z funkce hodnotu x
 function findMin(list) {
-    return 0
+
+
+    let min = 100
+    for(let i = 0; i < list.length; i++) {
+        let x = list[i]
+        if function findMin(list:i): <100 (let x = list[i])
+        
+        return x
+    }
 }
