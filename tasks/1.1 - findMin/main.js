@@ -19,8 +19,8 @@ function findMin(list) {
     let min = 100
     for(let i = 0; i < list.length; i++) {
         let x = list[i]
-        if function findMin(list:i): <100 (let x = list[i])
-        
-        return x
+        if (x < min) min = x
     }
+
+    return min
 }

@@ -17,11 +17,27 @@ function setup() {
 // Tip - můžete vždy najít nejmenší číslo v seznamu, smazat ho a přidat ho do nového seznamu,
 // nový seznam bude potom obsahovat stejná čísla jako původní, ale ve správněm pořadí
 function mySort(list) {
-    return list
+    var sorted = []
+
+    var min= findMin(list)
+    sorted.push(min)
+    var index = list.indexOf(min)
+    list.splice(index, 1)
+
+    return sorted
 }
 
+function findMin(list) {
 
 
+    let min = 100
+    for(let i = 0; i < list.length; i++) {
+        let x = list[i]
+        if (x < min) min = x
+    }
+
+    return min
+}
 
 
 
